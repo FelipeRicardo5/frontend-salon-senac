@@ -1,0 +1,70 @@
+body {
+    font-family: "Montserrat", serif;
+}
+
+.mainNavbar {
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    color: #005594;
+    justify-content: space-around;
+    border-bottom: 4px solid #f57c00;
+}
+
+.mainNavbar button {
+    background-color: #00549486;
+    margin: 4px;
+    transition: 0.7s;
+}
+
+.mainNavbar button:hover {
+    background-color: #005494;
+}
+
+.secondNavbar {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 2em;
+}
+
+.secondNavbar a {
+    padding: 10px;
+    transition: 0.5s ease;
+}
+
+.secondNavbar a:hover {
+    font-weight: 600;
+    box-shadow: 10px#f57c00;
+}
+
+.containerQuemSomos {
+    justify-content: center;
+    display: flex;
+    padding: 33px;
+    background-color: #2d6191;
+    text-align: justify;
+}
+
+.containerQuemSomos img {
+    max-width: 700px;
+    margin-right: 80px;
+    position: relative;
+    animation: float 2.5s ease-in-out infinite alternate;
+}
+
+.containerQuemSomos h2 {
+    font-size: 30px;
+    color: #ff860d;
+}
+
+@keyframes float{
+    0%{
+        top: 0;
+
+    }
+    100%{
+        top: 30px;
+    }
+}
