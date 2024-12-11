@@ -1,16 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
     font-family: "Montserrat", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #005494;
 }
+
+/* --------------------------MAIN NAVBAR-------------------------- */
 
 .mainNavbar {
     margin: 0;
     display: flex;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     background-color: rgb(255, 255, 255);
     color: #005594;
     justify-content: space-around;
     border-bottom: 4px solid #f57c00;
+    transform: translateY(0px);
+    -webkit-box-shadow: 0px 9px 37px -13px rgba(0,0,0,0.60);
+    -moz-box-shadow: 0px 9px 37px -13px rgba(0,0,0,0.60);
+    box-shadow: 0px 9px 37px -18px rgba(0,0,0,0.60);
 }
 
 .mainNavbar button {
@@ -23,6 +37,8 @@ body {
     background-color: #005494;
 }
 
+/* --------------------------SECOND NAVBAR-------------------------- */
+
 .secondNavbar {
     margin: 0;
     background-color: rgb(255, 255, 255);
@@ -32,32 +48,155 @@ body {
 .secondNavbar a {
     padding: 10px;
     transition: 0.5s ease;
+    color: #005494;
+    border-bottom: 2px solid #ffffff;
 }
 
 .secondNavbar a:hover {
     font-weight: 600;
-    box-shadow: 10px#f57c00;
+    border-bottom: 2px solid #f57c00;
 }
 
+/* --------------------------QUEM SOMOS?-------------------------- */
+
 .containerQuemSomos {
+    margin: 0;
     justify-content: center;
     display: flex;
     padding: 33px;
     background-color: #2d6191;
     text-align: justify;
+
+
+    transform: translateY(0px);
+    -webkit-box-shadow: 0px 9px 37px -13px rgba(0,0,0,0.60);
+    -moz-box-shadow: 0px 9px 37px -13px rgba(0,0,0,0.60);
+    box-shadow: 0px 9px 37px -18px rgba(0,0,0,0.60);
 }
 
 .containerQuemSomos img {
-    max-width: 700px;
-    margin-right: 80px;
+    max-width: 50%;
+    margin-right: 0;
     position: relative;
     animation: float 2.5s ease-in-out infinite alternate;
 }
 
 .containerQuemSomos h2 {
+    font-weight: 700;
     font-size: 30px;
-    color: #ff860d;
+    color: #ff972e;
 }
+
+.containerQuemSomos p {
+    font-family: "Montserrat", serif;
+}
+
+/* --------------------------NOSSOS SERVIÇOS-------------------------- */
+
+.containerNossosServicos {
+    margin: 0;
+    height: auto;
+    padding: 3em 20em 4em 20em;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-family: "Montserrat", serif;
+    color: #f57c00;
+
+    -webkit-box-shadow: inset 0px 29px 46px -33px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 29px 46px -33px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 29px 46px -33px rgba(0,0,0,0.75);
+}
+
+.containerNossosServicos h3 {
+    margin: 0px 0px 4rem 0px;
+    font-weight: 600;
+    font-size: 35px;
+    color: #005494;
+}
+
+/* --------------------------CARD SERVICES-------------------------- */
+
+.cardServicos{
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    width: 10vw;
+    height: 20vh;
+    background-color: #f57c00;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    
+    /* -webkit-box-shadow: 0px 9px 37px -13px rgba(0,0,0,0.60);
+    -moz-box-shadow: 0px 9px 37px -13px rgba(0,0,0,0.60);
+    box-shadow: 0px 9px 37px -18px rgba(0,0,0,0.60); */
+    background: linear-gradient(180deg, rgb(255, 108, 22) 0%, rgb(255, 145, 55) 100%);
+    transition: 0.5s;
+}
+
+.cardServicos:hover {
+    -webkit-box-shadow: 0px 22px 55px -28px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 22px 55px -28px rgba(0,0,0,0.75);
+    box-shadow: 0px 22px 55px -28px rgba(0,0,0,0.75);
+}
+
+.cardServicos p {
+    color: #ffffff;
+    font-family: "Montserrat", serif;
+}
+
+/* --------------------------NOSSA LOCALIZAÇÃO-------------------------- */
+
+.containerNossaLocalizacao {
+    background-image: url(../../assets/funod.png);
+    background-size: cover;
+    background-position: 10% 50%;
+    background-repeat: no-repeat;
+    height: 60vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #2d6191;
+
+    -webkit-box-shadow: inset 0px 29px 46px -33px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 29px 46px -33px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 29px 46px -33px rgba(0,0,0,0.75);
+}
+
+
+.containerNossaLocalizacao h3 {
+    color: #ff972e;
+    margin: 0px 0px 0rem 0px;
+    font-weight: 550;
+    font-size: 35px;
+}
+
+.containerNossaLocalizacao p {
+    font-family: "Montserrat", serif;
+}
+/* --------------------------NOSSA LOCALIZAÇÃO ( COMPONENTES ) -------------------------- */
+.loc {
+    z-index: 1;
+    width: 200px;
+    position: absolute;
+    transform: rotate(0deg) translateX(21.5vh) translateY(2.5vw);
+    animation: float 2.5s ease-in-out infinite alternate;
+}
+.map {
+    width: 500px;
+    z-index: 2;
+    transform: translateX(58px) rotate(10deg);
+}
+
+.shadow {
+    z-index: 1;
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    transform: translateX(-400px) translateY(250px);
+}
+/* --------------------------FEEDBACK-------------------------- */
 
 @keyframes float{
     0%{
@@ -66,5 +205,49 @@ body {
     }
     100%{
         top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .containerQuemSomos {
+        flex-direction: column;
+        text-align: center;
+    }
+    .containerQuemSomos img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .containerQuemSomos p {
+        font-family: "Montserrat", serif;
+        font-size: 15px;
+    }
+}
+@media (max-width: 1280px){
+    .containerQuemSomos p {
+        font-family: "Montserrat", serif;
+        font-size: 15px;
+    }
+    .cardServicos{
+        padding-top: 10px;
+        width: 13vw;
+        height: 25vh;
+    }
+    .containerNossaLocalizacao {
+        height: 70vh;
+    }
+    .loc {
+        z-index: 1;
+        width: 200px;
+        position: absolute;
+        transform: rotate(0deg) translateX(21.5vh) translateY(0vw);
+        animation: float 2.5s ease-in-out infinite alternate;
+    }
+    .map {
+        width: 500px;
+        z-index: 2;
+        transform: translateX(-10px) rotate(20deg);
+    }
+    .shadow {
+        transform: translateX(-470px) translateY(250px);
     }
 }
