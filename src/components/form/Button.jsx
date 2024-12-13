@@ -1,13 +1,21 @@
 import styles from './Button.module.css'
 
-function Button({ text }) {
-    return (
-        <div>
-            <button className={styles.btn} >
-                {text}
-            </button>
-        </div>
-    )
-}
+const Button = ({ onClick, text, type = 'button', variant = 'default' }) => {
+  return (
+    <div>
+      <button
+        onClick={onClick}
+        className=
+        {`${styles.btn} 
+        ${variant === 'larger' ? styles.larger : ''} 
+        ${variant === 'medium' ? styles.secondary : ''}`}
+        type={type}
+      >
+        {text}
+      </button>
+    </div>
+  );
+};
+
 
 export default Button;

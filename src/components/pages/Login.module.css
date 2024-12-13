@@ -1,0 +1,67 @@
+.body{
+    font-family: "Montserrat", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.loginRegister{
+    display: flex;
+    width: 60%;
+
+    box-shadow: 0px 26px 40px 0px rgba(0,0,0,0.25);
+    border-radius: 20px 20px 20px 20px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    padding: 40px;
+    background-color: rgb(255, 255, 255);
+
+    border-radius: 20px 0px 0px 20px;
+}
+
+.login h2 {
+    font-size: 25px;
+    color: #005494;
+}
+
+.login p {
+    font-weight: 500;
+    font-family: "Montserrat", serif;
+    color: rgb(170, 170, 170);
+}
+
+.login a {
+    color: #f57c00;
+    padding: 1.5rem;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    padding: 40px;
+    background-color: #005494;
+
+    border-radius: 0px 20px 20px 0px;
+}
+
+.register h2 {
+    color: #f57c00;
+}
+
+.register p {
+    font-family: "Montserrat", serif;
+}
+
+.register a {
+    color: #f57c00;
+}

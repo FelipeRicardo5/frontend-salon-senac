@@ -1,6 +1,9 @@
 import styles from './LandingPage.module.css'
-import ServiceCard from '../form/ServiceCard';
+import { useNavigate } from 'react-router-dom';
+
 import Button from '../form/Button';
+import FeedbackList from '../feedback/FeedbackList';
+import FeedbackForm from '../feedback/FeedbackForm';
 
 import LogoSenac from '../../assets/logoSenac.png'
 import MocaSalao from '../../assets/mocasalao.png'
@@ -22,9 +25,23 @@ import Card from '../form/Card'
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 
+
 function LandingPage() {
+    
+
+const navigate = useNavigate();
+
+const handleButtonClickFeedback = () => {
+          navigate('/feedback'); 
+          console.log('Deu certo meu chapa!')
+};
+const handleButtonClickScheduleTime = () => {
+          navigate('/login'); 
+          console.log('Deu certo meu chapa!')
+};
+    
     return (
-        <div style={{width: '100vw', margin: '0px', padding: '0px'}} >
+        <div className={styles.bodyy} style={{width: '100vw', margin: '0px', padding: '0px'}} >
             
             
                 <nav className={styles.mainNavbar} >
@@ -33,25 +50,25 @@ function LandingPage() {
                 <h1>Salão Senac</h1>
                 <div>
 
-                    <a href="https://www.instagram.com/senacpe" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
-                    <a href="https://www.youtube.com/user/SenacPernambuco" target="_blank"><button><i class="bi bi-youtube"></i></button></a>
-                    <a href="https://x.com/senacpe" target="_blank"><button><i class="bi bi-twitter-x"></i></button></a>
-                    <a href="https://www.facebook.com/senacpe" target="_blank"><button><i class="bi bi-facebook"></i></button></a>
-                    <a href="https://www.linkedin.com/company/senacpe" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
+                    <a href="https://www.instagram.com/senacpe" target="_blank"><button><i className="bi bi-instagram"></i></button></a>
+                    <a href="https://www.youtube.com/user/SenacPernambuco" target="_blank"><button><i className="bi bi-youtube"></i></button></a>
+                    <a href="https://x.com/senacpe" target="_blank"><button><i className="bi bi-twitter-x"></i></button></a>
+                    <a href="https://www.facebook.com/senacpe" target="_blank"><button><i className="bi bi-facebook"></i></button></a>
+                    <a href="https://www.linkedin.com/company/senacpe" target="_blank"><button><i className="bi bi-linkedin"></i></button></a>
 
                 </div>
 
                 </nav>
                 <div className={styles.secondNavbar}>
-                    <a href="#inicio">Início</a>
+                    <a href="#start">Início</a>
                     <a href="#services">Serviços</a>
-                    <a href="#localizacao">Localização</a>
+                    <a href="#location">Localização</a>
                     <a href="#Feedback">Feedback</a>
                     <a href="componentes/cadastro.html">Agendar serviço</a>
                 </div>
             
 
-            <section className={styles.containerQuemSomos} >
+            <section className={styles.containerQuemSomos} id='start'>
                 <img src={MocaSalao} />
                 <div style={{display: 'block', width: '500px', fontSize: '20px', marginLeft: '200px'}} >
                     <h2>QUEM SOMOS?</h2>
@@ -76,11 +93,12 @@ function LandingPage() {
 
                     <Button
                     text={'Agendar Horário'}
+                    onClick={handleButtonClickScheduleTime}
                     />
                 </div>
                 
             </section>
-            <section className={styles.containerNossosServicos} >
+            <section className={styles.containerNossosServicos} id='services'>
                 <h3>Nossos Serviços</h3>
                     <div style={{display: 'flex', justifyContent: 'center', gap: '40px', flexWrap: 'wrap'}} >
                         <div className={styles.cardServicos} >
@@ -121,7 +139,7 @@ function LandingPage() {
                         </div>
                     </div>
             </section>
-            <section className={styles.containerNossaLocalizacao} >
+            <section className={styles.containerNossaLocalizacao} id='location'>
                 <div>
                     <h3>Onde ficamos localizados?</h3>
                     <p>Av. Visconde de Suassuna 500, Recife, PE, 50050-540</p>
@@ -138,6 +156,17 @@ function LandingPage() {
                     <img className={styles.shadow} src={Sombra}/>
                 </div>
             </section>
+            <section className={styles.DeixeSeuFeedback} >
+                <FeedbackList />
+                <Button 
+                    text={"FeedBack"}
+                    onClick={handleButtonClickFeedback}
+                />
+            </section>
+            <footer>
+                <p>© 2024 Salão Senac</p>
+                <p style={{marginTop: "20px"}} >Senac Pernambuco (sede)<br/> Central de Atendimento: Segunda a Sexta (8h às 20h) e Sábados (8h30 às 12h)<br/> Telefones: (81) 3413.6666 / 6728 / 6729 / 6730</p>
+            </footer>
 
             {/* <ServiceCard 
             // Serviços Básicos

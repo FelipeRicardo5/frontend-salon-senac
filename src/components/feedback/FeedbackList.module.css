@@ -1,0 +1,29 @@
+.container {
+    padding: 16px;
+    text-align: center;
+}
+.container h2 {
+    color: #2d6191;
+}
+
+.feedbackList {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.feedbackList h2 {
+    color: #2d6191;
+}
+
+.ListComents {
+    font-family: "Montserrat", serif;
+    color: #2d6191;
+}
+
+@media (max-width: 1280px){
+    body {
+        background-position: -1070px -100px;
+    }
+
+}
