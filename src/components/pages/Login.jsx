@@ -42,7 +42,6 @@ function Login() {
                         <Button
                             text={"fazer login com sua conta Google"}
                         />
-                        <i style={{color: "lightgrey", marginLeft: "10px", fontSize: "30px"}} class="bi bi-google"></i>
                         
                     </div>
 
@@ -53,7 +52,6 @@ function Login() {
                         <Button
                             text={"Fazer login com sua conta Apple"}
                         />
-                        <i style={{color: "lightgrey", marginLeft: "10px", fontSize: "30px"}} class="bi bi-apple"></i>
 
                     </div>
                 </div>

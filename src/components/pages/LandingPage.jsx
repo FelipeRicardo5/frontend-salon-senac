@@ -164,8 +164,8 @@ const handleButtonClickScheduleTime = () => {
                 />
             </section>
             <footer>
-                <p>© 2024 Salão Senac</p>
-                <p style={{marginTop: "20px"}} >Senac Pernambuco (sede)<br/> Central de Atendimento: Segunda a Sexta (8h às 20h) e Sábados (8h30 às 12h)<br/> Telefones: (81) 3413.6666 / 6728 / 6729 / 6730</p>
+                <p style={{color:"white"}}>© 2024 Salão Senac</p>
+                <p style={{marginTop: "20px" , color:"white"}} >Senac Pernambuco (sede)<br/> Central de Atendimento: Segunda a Sexta (8h às 20h) e Sábados (8h30 às 12h)<br/> Telefones: (81) 3413.6666 / 6728 / 6729 / 6730</p>
             </footer>
 
             {/* <ServiceCard 

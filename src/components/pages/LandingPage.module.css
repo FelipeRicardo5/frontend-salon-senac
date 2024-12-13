@@ -32,7 +32,7 @@ body {
 }
 
 .mainNavbar button {
-    background-color: #00549486;
+    background-color: #bebebe86;
     margin: 4px;
     transition: 0.7s;
     border-radius: 30px;
@@ -52,7 +52,7 @@ body {
 }
 
 .secondNavbar a {
-    padding: 10px;
+    padding: 50px;
     transition: 0.5s ease;
     color: #005494;
     border-bottom: 2px solid #ffffff;
@@ -95,6 +95,7 @@ body {
 
 .containerQuemSomos p {
     font-family: "Montserrat", serif;
+    color: #ffffff;
 }
 
 /* --------------------------NOSSOS SERVIÇOS-------------------------- */
@@ -184,6 +185,8 @@ body {
 
 .containerNossaLocalizacao p {
     font-family: "Montserrat", serif;
+    color:#ffffff;
+    font-size: 20px;
 }
 /* --------------------------NOSSA LOCALIZAÇÃO ( COMPONENTES ) -------------------------- */
 .loc {
@@ -291,5 +294,7 @@ footer p {
     }
     footer {
         height: 30vh;
+        font-size: 20px;
+
     }
 }
