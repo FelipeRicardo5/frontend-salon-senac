@@ -38,12 +38,6 @@
       "name": "Heytor",
       "serviceRating": "3",
       "comments": "Curti demais dog."
-    },
-    {
-      "id": "b82e",
-      "name": "Felipe",
-      "serviceRating": "3",
-      "comments": "fd"
     }
   ],
   "users": [
@@ -58,24 +52,6 @@
       "name": "Maria Oliveira",
       "email": "maria@exemplo.com",
       "password": "abcdef"
-    },
-    {
-      "id": "ef65",
-      "name": "Felipe Ricardo de ",
-      "email": "felipe1ricardo158@gmail.com",
-      "password": "ricorico321"
-    },
-    {
-      "id": "9a1e",
-      "name": "",
-      "email": "",
-      "password": "123456"
-    },
-    {
-      "id": "5735",
-      "name": "",
-      "email": "f",
-      "password": "123456"
     }
   ]
 }
