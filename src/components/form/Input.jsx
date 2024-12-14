@@ -1,8 +1,8 @@
 import styles from './Input.module.css'
 
-function Input({ text, type, value, onChange, placeholder, min, max, variant = 'default' }) {
+function Input({ text, type, value, onChange, placeholder, min, max, variant = 'default', variantLabel = 'default' }) {
     return(
-        <label className={styles.labelInput} >
+        <label className={`${styles.labelInput} ${variantLabel === 'labelBlack' ? styles.labelBlack: ''}`} >
             {text}
             <input 
             type={type} 
@@ -14,7 +14,7 @@ function Input({ text, type, value, onChange, placeholder, min, max, variant = '
             className={`${styles.inpt} 
             ${variant === 'simple' ? styles.simple : ''} 
             ${variant === 'normal' ? styles.normal : ''}
-            ${variant === 'medium' ? styles.secondary : ''}
+            ${variant === 'scheduling' ? styles.scheduling : ''}
             `}
                  
             >

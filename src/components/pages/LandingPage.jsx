@@ -5,6 +5,7 @@ import Button from '../form/Button';
 import FeedbackList from '../feedback/FeedbackList';
 import FeedbackForm from '../feedback/FeedbackForm';
 
+
 import LogoSenac from '../../assets/logoSenac.png'
 import MocaSalao from '../../assets/mocasalao.png'
 
@@ -39,7 +40,7 @@ const handleButtonClickScheduleTime = () => {
           navigate('/login'); 
           console.log('Deu certo meu chapa!')
 };
-    
+
     return (
         <div className={styles.bodyy} style={{width: '100vw', margin: '0px', padding: '0px'}} >
             
@@ -158,6 +159,7 @@ const handleButtonClickScheduleTime = () => {
             </section>
             <section className={styles.DeixeSeuFeedback} >
                 <FeedbackList />
+                <p>Contribua você também com os nossos serviços e nos mande um feedback!</p>
                 <Button 
                     text={"FeedBack"}
                     onClick={handleButtonClickFeedback}

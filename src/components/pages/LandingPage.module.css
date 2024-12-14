@@ -219,6 +219,12 @@ body {
     -moz-box-shadow: inset 0px 29px 46px -33px rgba(0,0,0,0.75);
     box-shadow: inset 0px 29px 46px -33px rgba(0,0,0,0.75);
 }
+
+.DeixeSeuFeedback p {
+    font-family: "Montserrat", serif;
+    color: #005494;
+    
+}
 /* --------------------------FOOTER-------------------------- */
 footer {
     background-color: #2d6191;
