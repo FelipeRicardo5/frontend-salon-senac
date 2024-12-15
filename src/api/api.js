@@ -5,6 +5,17 @@ const apiMock = axios.create({
   baseURL: 'http://localhost:3000', // Endereço do JSON Server
 });
 
+const apiReal = axios.create({
+  baseURL: 'http://localhost:8081/salao', // Endereço da API Rai
+              headers: {
+                'Content-Type': 'application/json',
+              }
+});
+
+
+// ------------------------------------------------------------------------------------------------------
+
+
 // Busco todos os feedbacks
 export const getFeedback = async () => {
   const response = await apiMock.get('/feedbacks');
@@ -49,7 +60,55 @@ export const handleRegister = async (userData) => {
   }
 };
 
+// ------------------------------------------------------------------------------------------------------
 
+// Criar um cliente
+export const createCliente = async (cliente) => {
+  const response = await apiReal.post('/cliente', cliente);
+  return response.data;
+};
+
+// Buscar todos os clientes
+export const getAllClientes = async () => {
+  const response = await apiReal.get('/clientes');
+  return response.data;
+};
+
+// Buscar cliente por CPF
+export const getClienteByCpf = async (cpf) => {
+  const response = await apiReal.get(`/cliente/${cpf}`);
+  return response.data;
+};
+
+// Buscar cliente por nome
+export const getClienteByNome = async (nome) => {
+  const response = await apiReal.get(`/cliente/nome/${nome}`);
+  return response.data;
+};
+
+// Buscar cliente por email
+export const getClienteByEmail = async (email) => {
+  const response = await apiReal.get(`/cliente/email/${email}`);
+  return response.data;
+};
+
+// Atualizar um cliente
+export const updateCliente = async (cpf, cliente) => {
+  const response = await apiReal.put(`/cliente/${cpf}`, cliente);
+  return response.data;
+};
+
+// Deletar um cliente
+export const deleteCliente = async (cpf) => {
+  const response = await apiReal.delete(`/cliente/${cpf}`);
+  return response.data;
+};
+
+// Deletar todos os clientes
+export const deleteAllClientes = async () => {
+  const response = await apiReal.delete('/clientes');
+  return response.data;
+};
 
 
 export default apiMock;

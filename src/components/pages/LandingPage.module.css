@@ -10,8 +10,12 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    scroll-behavior: smooth;
     background-color: #005494;
+}
+
+.bodyy h1 {
+    font-size: 45px
 }
 
 /* --------------------------MAIN NAVBAR-------------------------- */
@@ -20,6 +24,7 @@ body {
     margin: 0;
     display: flex;
     width: 100%;
+    justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
     color: #005594;
@@ -46,21 +51,38 @@ body {
 /* --------------------------SECOND NAVBAR-------------------------- */
 
 .secondNavbar {
+    display: flex;
+    justify-content: space-around;
     margin: 0;
     background-color: rgb(255, 255, 255);
     padding: 2em;
 }
 
-.secondNavbar a {
+.buttonNavigation {
+    border: none;
+    background-color: #ffffff00;
     padding: 10px;
     transition: 0.5s ease;
     color: #005494;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff00;
 }
 
-.secondNavbar a:hover {
+.buttonNavigation:hover {
     font-weight: 600;
     border-bottom: 2px solid #f57c00;
+}
+
+.btnUm {
+    font-weight: 350;
+    background-color: #005494;
+    border: none;
+}
+
+.btnDois {
+    margin-left: 1rem;
+    font-weight: 350;
+    background-color: #f57c00;
+    border: none;
 }
 
 /* --------------------------QUEM SOMOS?-------------------------- */
@@ -223,7 +245,7 @@ body {
 .DeixeSeuFeedback p {
     font-family: "Montserrat", serif;
     color: #005494;
-    
+
 }
 /* --------------------------FOOTER-------------------------- */
 footer {

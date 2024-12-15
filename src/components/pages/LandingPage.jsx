@@ -1,5 +1,6 @@
 import styles from './LandingPage.module.css'
 import { useNavigate } from 'react-router-dom';
+import { useRef } from 'react';
 
 import Button from '../form/Button';
 import FeedbackList from '../feedback/FeedbackList';
@@ -30,16 +31,26 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 function LandingPage() {
     
 
-const navigate = useNavigate();
+    const navigate = useNavigate();
 
-const handleButtonClickFeedback = () => {
-          navigate('/feedback'); 
-          console.log('Deu certo meu chapa!')
-};
-const handleButtonClickScheduleTime = () => {
-          navigate('/login'); 
-          console.log('Deu certo meu chapa!')
-};
+    const handleButtonClickFeedback = () => {
+            navigate('/feedback'); 
+    };
+    const handleButtonClickScheduleTime = () => {
+            navigate('/login'); 
+    };
+
+    const sectionStart = useRef(null);
+    const sectionServices = useRef(null);
+    const sectionLocation = useRef(null);
+    const sectionFeedback = useRef(null);
+
+    const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+    });
+    };
 
     return (
         <div className={styles.bodyy} style={{width: '100vw', margin: '0px', padding: '0px'}} >
@@ -61,15 +72,25 @@ const handleButtonClickScheduleTime = () => {
 
                 </nav>
                 <div className={styles.secondNavbar}>
-                    <a href="#start">Início</a>
-                    <a href="#services">Serviços</a>
-                    <a href="#location">Localização</a>
-                    <a href="#Feedback">Feedback</a>
-                    <a href="componentes/cadastro.html">Agendar serviço</a>
+                    <div>
+                    <button className={styles.buttonNavigation} onClick={() => scrollToSection(sectionStart)} >Início</button>
+                    <button className={styles.buttonNavigation} onClick={() => scrollToSection(sectionServices)} >Serviços</button>
+                    <button className={styles.buttonNavigation} onClick={() => scrollToSection(sectionLocation)} >Localização</button>
+                    <button className={styles.buttonNavigation} onClick={() => scrollToSection(sectionFeedback)} >Feedback</button>
+                    <button className={styles.buttonNavigation} onClick={() => scrollToSection()} >Agendar serviço</button>
+                    </div>
+                    <div>
+                        {/* <button className={styles.btnUm} onClick={handleButtonClickScheduleTime} >
+                            Espaço do Administrador
+                        </button>
+                        <button className={styles.btnDois} onClick={handleButtonClickScheduleTime} >
+                            Espaço do Cliente
+                        </button> */}
+                    </div>
                 </div>
             
 
-            <section className={styles.containerQuemSomos} id='start'>
+            <section className={styles.containerQuemSomos} ref={sectionStart}>
                 <img src={MocaSalao} />
                 <div style={{display: 'block', width: '500px', fontSize: '20px', marginLeft: '200px'}} >
                     <h2>QUEM SOMOS?</h2>
@@ -99,7 +120,7 @@ const handleButtonClickScheduleTime = () => {
                 </div>
                 
             </section>
-            <section className={styles.containerNossosServicos} id='services'>
+            <section className={styles.containerNossosServicos} ref={sectionServices}>
                 <h3>Nossos Serviços</h3>
                     <div style={{display: 'flex', justifyContent: 'center', gap: '40px', flexWrap: 'wrap'}} >
                         <div className={styles.cardServicos} >
@@ -140,7 +161,7 @@ const handleButtonClickScheduleTime = () => {
                         </div>
                     </div>
             </section>
-            <section className={styles.containerNossaLocalizacao} id='location'>
+            <section className={styles.containerNossaLocalizacao} ref={sectionLocation}>
                 <div>
                     <h3>Onde ficamos localizados?</h3>
                     <p>Av. Visconde de Suassuna 500, Recife, PE, 50050-540</p>
@@ -157,7 +178,7 @@ const handleButtonClickScheduleTime = () => {
                     <img className={styles.shadow} src={Sombra}/>
                 </div>
             </section>
-            <section className={styles.DeixeSeuFeedback} >
+            <section className={styles.DeixeSeuFeedback} ref={sectionFeedback} >
                 <FeedbackList />
                 <p>Contribua você também com os nossos serviços e nos mande um feedback!</p>
                 <Button 

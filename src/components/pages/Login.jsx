@@ -14,6 +14,8 @@ import Toast from '../form/Toast'
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 function Login() {
+
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -37,15 +39,19 @@ function Login() {
         try {
             // Chama a função handleLogin do arquivo api.js
             const user = await handleLogin(email, password);
+            if (email == 'admin@senac.com' && password == 'admin123'){
+                console.log('até aqui tudo certo!')
+                navigate('/clientes');
+            }
             if (!email || !password) {
                 showToast('Por favor, preencha todos os campos.', 'error');
                 return;
             }
             if (user && user.name) {
                 showToast(`Bem-vindo(a), ${user.name}!`, 'success')
-                // alert(`Bem-vindo(a), ${user.name}!`);
+
                 localStorage.setItem('user', JSON.stringify(user)); // Salva no localStorage
-                navigate('/scheduling'); // Redireciona para o dashboard
+                navigate('/scheduling');
             } else {
                 showToast('Email ou senha inválidos!', 'error')
             }
@@ -74,11 +80,7 @@ function Login() {
             const userData = { name, email, password };
                 // Chama a função de registro
             const user = await handleRegister(userData);
-        
-
             showToast('Cadastrou bucetinha tu é foda, agora faz o login faz safado', 'success')
-
-
             } 
             catch (error) {
                 showToast('Ocorreu um erro ao cadastrar o usuário, tente novamente mais tarde!', 'error')
