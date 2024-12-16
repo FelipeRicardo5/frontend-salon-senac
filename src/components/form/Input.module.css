@@ -4,6 +4,11 @@
     font-weight: 500;
 }
 
+.labelBlack {
+    color: black;
+    font-weight: 500;
+}
+
 .inpt {
     font-family: "Montserrat", serif;
     border-radius: 20px;
@@ -43,4 +48,15 @@
 
 .simple::placeholder {
     color: rgb(179, 179, 179);
+}
+
+.scheduling {
+    color: black;
+    border: 1px solid grey;
+    transition:  0.5s;
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
+}
+
+.scheduling:hover {
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.20);
 }

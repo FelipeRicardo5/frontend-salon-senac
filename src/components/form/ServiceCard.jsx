@@ -2,12 +2,12 @@ import styles from './ServiceCard.module.css'
 
 function ServiceCard({ ProfessionalName, FirstService, SecondService, ThirdService, FirstDay, SecondDay, ThirdDay, FirstTime, SecondTime, ThirdTime }) {
     return (
-        <div>
+        <div className={styles.container} >
        
 
         <div className={styles.mainContainer} >
             <h2>{ProfessionalName}</h2>
-            <div className={styles.secondaryContainer}><h3>Horários disponíveis:</h3>
+            <div className={styles.secondaryContainer}><h3>Serviços disponíveis:</h3>
             <ul>
                 <li>{FirstService}</li>
                 <li>{SecondService}</li>

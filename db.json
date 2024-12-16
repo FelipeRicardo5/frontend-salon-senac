@@ -11,14 +11,14 @@
       "id": "2d2f",
       "name": "Felipe",
       "serviceRating": "4",
-      "comments": "Muito Ruim!",
+      "comments": "Puta que pariu, serviço do caralho!",
       "profile": "default.png"
     },
     {
       "id": "24eb",
       "name": "Raissa",
       "serviceRating": "3",
-      "comments": "Não coloquei fé, mas tem um ótimo atendimento!",
+      "comments": "Não coloquei fé, mas jesus! ótimo atendimento!",
       "profile": "default.png"
     },
     {
@@ -38,6 +38,26 @@
       "name": "Heytor",
       "serviceRating": "3",
       "comments": "Curti demais dog."
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "João Silva",
+      "email": "joao@exemplo.com",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "name": "Maria Oliveira",
+      "email": "maria@exemplo.com",
+      "password": "abcdef"
+    },
+    {
+      "id": "3",
+      "name": "",
+      "email": "admin@senac.com",
+      "password": "admin123"
     }
   ]
 }

@@ -11,8 +11,12 @@ body {
     padding: 0;
     box-sizing: border-box;
     height: 100vh;
-
+    scroll-behavior: smooth;
     background-color: #005494;
+}
+
+.bodyy h1 {
+    font-size: 45px
 }
 
 /* --------------------------MAIN NAVBAR-------------------------- */
@@ -22,6 +26,7 @@ body {
     display: flex;
     width: 100%;
     padding: 26px;
+    justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
     color: #005594;
@@ -54,21 +59,43 @@ body {
 /* --------------------------SECOND NAVBAR-------------------------- */
 
 .secondNavbar {
+    display: flex;
+    justify-content: space-around;
     margin: 0;
     background-color: rgb(255, 255, 255);
     padding: 2em;
 }
 
+
 .secondNavbar a {
     padding: 50px;
+
+.buttonNavigation {
+    border: none;
+    background-color: #ffffff00;
+    padding: 10px;
+
     transition: 0.5s ease;
     color: #005494;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff00;
 }
 
-.secondNavbar a:hover {
+.buttonNavigation:hover {
     font-weight: 600;
     border-bottom: 2px solid #f57c00;
+}
+
+.btnUm {
+    font-weight: 350;
+    background-color: #005494;
+    border: none;
+}
+
+.btnDois {
+    margin-left: 1rem;
+    font-weight: 350;
+    background-color: #f57c00;
+    border: none;
 }
 
 /* --------------------------QUEM SOMOS?-------------------------- */
@@ -229,6 +256,12 @@ body {
     -webkit-box-shadow: inset 0px 29px 46px -33px rgba(0,0,0,0.75);
     -moz-box-shadow: inset 0px 29px 46px -33px rgba(0,0,0,0.75);
     box-shadow: inset 0px 29px 46px -33px rgba(0,0,0,0.75);
+}
+
+.DeixeSeuFeedback p {
+    font-family: "Montserrat", serif;
+    color: #005494;
+
 }
 /* --------------------------FOOTER-------------------------- */
 footer {
