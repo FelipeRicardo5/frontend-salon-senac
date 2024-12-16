@@ -10,6 +10,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height: 100vh;
 
     background-color: #005494;
 }
@@ -20,6 +21,7 @@ body {
     margin: 0;
     display: flex;
     width: 100%;
+    padding: 26px;
     align-items: center;
     background-color: rgb(255, 255, 255);
     color: #005594;
@@ -42,6 +44,12 @@ body {
 .mainNavbar button:hover {
     background-color: #005494;
 }
+.mainNavbar h1{
+    padding: 9px;
+    color: #005494;
+    font-weight: 600;
+}
+
 
 /* --------------------------SECOND NAVBAR-------------------------- */
 
@@ -226,9 +234,9 @@ body {
 footer {
     background-color: #2d6191;
 
-    height: 20vh;
+    height: 28vh;
     text-align: center;
-    padding-top: 3%;
+    padding-top: 2%;
 
     -webkit-box-shadow: inset 0px 29px 46px -33px rgba(0,0,0,0.75);
     -moz-box-shadow: inset 0px 29px 46px -33px rgba(0,0,0,0.75);

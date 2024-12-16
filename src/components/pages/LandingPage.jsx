@@ -107,6 +107,7 @@ const handleButtonClickDepi = () => {
                     depilação, massagem, podologia, </span>
                     entre outros.
                 </p>
+                <br />
 
                     <Button
                     text={'Agendar Horário'}
@@ -123,11 +124,11 @@ const handleButtonClickDepi = () => {
                             <p style={{fontSize: '20px'}} >Serviços de<br/> Barba</p>
                         </div>
                         <div className={styles.cardServicos}  onClick={handleButtonClickTratamento}>
-                            <img src={Icondepilacao} style={{width: '50px'}} />
-                            <p style={{fontSize: '20px'}} >Serviços de<br/> Depilação</p>
+                            <img src={Iconefeito} style={{width: '50px'}} />
+                            <p style={{fontSize: '20px'}} >Serviços de<br/> Tratamento</p>
                         </div>
                         <div className={styles.cardServicos}  onClick={handleButtonClickDepi} >
-                            <img src={Iconefeito} style={{width: '50px'}} />
+                            <img src={Icondepilacao} style={{width: '50px'}} />
                             <p style={{fontSize: '20px'}} >Serviços de<br/>depilação</p>
                         </div>
                         <div className={styles.cardServicos} >
@@ -161,6 +162,7 @@ const handleButtonClickDepi = () => {
                     <h3>Onde ficamos localizados?</h3>
                     <p>Av. Visconde de Suassuna 500, Recife, PE, 50050-540</p>
                     <a href="https://www.bing.com/maps?osid=ac6baf46-d541-4755-b973-758f4d7f18a7&cp=-8.052388%7E-34.880605&lvl=16.0&imgid=82b41084-49c3-4c52-b484-73b9102d6ed8&v=2&sV=2&form=S00027">
+                    <br />
                     <Button 
                     text={'Localização'}
                     />
@@ -175,6 +177,7 @@ const handleButtonClickDepi = () => {
             </section>
             <section className={styles.DeixeSeuFeedback} >
                 <FeedbackList />
+                <br />
                 <Button 
                     text={"FeedBack"}
                     onClick={handleButtonClickFeedback}
