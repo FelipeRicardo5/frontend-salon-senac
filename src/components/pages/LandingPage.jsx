@@ -8,6 +8,10 @@ import FeedbackForm from '../feedback/FeedbackForm';
 import LogoSenac from '../../assets/logoSenac.png'
 import MocaSalao from '../../assets/mocasalao.png'
 
+import Depi from '../services/depi.jsx';
+import Barba from '../services/barba.jsx';
+import Tratamento from '../services/tratamento.jsx';
+
 import Iconbarbeiro from '../../assets/barbeiro.png' 
 import Icondepilacao from '../../assets/depilacao.png' 
 import Iconefeito from '../../assets/efeito.png'
@@ -39,6 +43,19 @@ const handleButtonClickScheduleTime = () => {
           navigate('/login'); 
           console.log('Deu certo meu chapa!')
 };
+const handleButtonClickDepi = () => {
+    navigate('/depi'); // Certifique-se de que a rota "/depi" está definida
+    console.log('Navegando para a página de Depilação!');
+  };
+  const handleButtonClickBarba = () => {
+    navigate('/barba'); 
+    console.log('Navegando para a página de Barba!');
+  };
+  const handleButtonClickTratamento = () => {
+    navigate('/tratamento'); 
+    console.log('Navegando para a página de Tratamento!');
+  };
+
     
     return (
         <div className={styles.bodyy} style={{width: '100vw', margin: '0px', padding: '0px'}} >
@@ -101,15 +118,15 @@ const handleButtonClickScheduleTime = () => {
             <section className={styles.containerNossosServicos} id='services'>
                 <h3>Nossos Serviços</h3>
                     <div style={{display: 'flex', justifyContent: 'center', gap: '40px', flexWrap: 'wrap'}} >
-                        <div className={styles.cardServicos} >
+                        <div className={styles.cardServicos} onClick={handleButtonClickBarba} >
                             <img src={Iconbarbeiro} style={{width: '50px'}} />
                             <p style={{fontSize: '20px'}} >Serviços de<br/> Barba</p>
                         </div>
-                        <div className={styles.cardServicos} >
+                        <div className={styles.cardServicos}  onClick={handleButtonClickTratamento}>
                             <img src={Icondepilacao} style={{width: '50px'}} />
                             <p style={{fontSize: '20px'}} >Serviços de<br/> Depilação</p>
                         </div>
-                        <div className={styles.cardServicos} >
+                        <div className={styles.cardServicos}  onClick={handleButtonClickDepi} >
                             <img src={Iconefeito} style={{width: '50px'}} />
                             <p style={{fontSize: '20px'}} >Serviços de<br/>depilação</p>
                         </div>
