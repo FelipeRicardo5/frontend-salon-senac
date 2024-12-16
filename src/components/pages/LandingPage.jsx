@@ -10,6 +10,10 @@ import FeedbackForm from '../feedback/FeedbackForm';
 import LogoSenac from '../../assets/logoSenac.png'
 import MocaSalao from '../../assets/mocasalao.png'
 
+import Depi from '../services/depi.jsx';
+import Barba from '../services/barba.jsx';
+import Tratamento from '../services/tratamento.jsx';
+
 import Iconbarbeiro from '../../assets/barbeiro.png' 
 import Icondepilacao from '../../assets/depilacao.png' 
 import Iconefeito from '../../assets/efeito.png'
@@ -51,6 +55,29 @@ function LandingPage() {
         block: "center",
     });
     };
+
+const handleButtonClickFeedback = () => {
+          navigate('/feedback'); 
+          console.log('Deu certo meu chapa!')
+};
+const handleButtonClickScheduleTime = () => {
+          navigate('/login'); 
+          console.log('Deu certo meu chapa!')
+};
+const handleButtonClickDepi = () => {
+    navigate('/depi'); // Certifique-se de que a rota "/depi" está definida
+    console.log('Navegando para a página de Depilação!');
+  };
+  const handleButtonClickBarba = () => {
+    navigate('/barba'); 
+    console.log('Navegando para a página de Barba!');
+  };
+  const handleButtonClickTratamento = () => {
+    navigate('/tratamento'); 
+    console.log('Navegando para a página de Tratamento!');
+  };
+
+    
 
     return (
         <div className={styles.bodyy} style={{width: '100vw', margin: '0px', padding: '0px'}} >
@@ -112,6 +139,7 @@ function LandingPage() {
                     depilação, massagem, podologia, </span>
                     entre outros.
                 </p>
+                <br />
 
                     <Button
                     text={'Agendar Horário'}
@@ -123,16 +151,16 @@ function LandingPage() {
             <section className={styles.containerNossosServicos} ref={sectionServices}>
                 <h3>Nossos Serviços</h3>
                     <div style={{display: 'flex', justifyContent: 'center', gap: '40px', flexWrap: 'wrap'}} >
-                        <div className={styles.cardServicos} >
+                        <div className={styles.cardServicos} onClick={handleButtonClickBarba} >
                             <img src={Iconbarbeiro} style={{width: '50px'}} />
                             <p style={{fontSize: '20px'}} >Serviços de<br/> Barba</p>
                         </div>
-                        <div className={styles.cardServicos} >
-                            <img src={Icondepilacao} style={{width: '50px'}} />
-                            <p style={{fontSize: '20px'}} >Serviços de<br/> Depilação</p>
-                        </div>
-                        <div className={styles.cardServicos} >
+                        <div className={styles.cardServicos}  onClick={handleButtonClickTratamento}>
                             <img src={Iconefeito} style={{width: '50px'}} />
+                            <p style={{fontSize: '20px'}} >Serviços de<br/> Tratamento</p>
+                        </div>
+                        <div className={styles.cardServicos}  onClick={handleButtonClickDepi} >
+                            <img src={Icondepilacao} style={{width: '50px'}} />
                             <p style={{fontSize: '20px'}} >Serviços de<br/>depilação</p>
                         </div>
                         <div className={styles.cardServicos} >
@@ -166,6 +194,7 @@ function LandingPage() {
                     <h3>Onde ficamos localizados?</h3>
                     <p>Av. Visconde de Suassuna 500, Recife, PE, 50050-540</p>
                     <a href="https://www.bing.com/maps?osid=ac6baf46-d541-4755-b973-758f4d7f18a7&cp=-8.052388%7E-34.880605&lvl=16.0&imgid=82b41084-49c3-4c52-b484-73b9102d6ed8&v=2&sV=2&form=S00027">
+                    <br />
                     <Button 
                     text={'Localização'}
                     />
@@ -180,15 +209,19 @@ function LandingPage() {
             </section>
             <section className={styles.DeixeSeuFeedback} ref={sectionFeedback} >
                 <FeedbackList />
+
+                <br />
+
                 <p>Contribua você também com os nossos serviços e nos mande um feedback!</p>
+
                 <Button 
                     text={"FeedBack"}
                     onClick={handleButtonClickFeedback}
                 />
             </section>
             <footer>
-                <p>© 2024 Salão Senac</p>
-                <p style={{marginTop: "20px"}} >Senac Pernambuco (sede)<br/> Central de Atendimento: Segunda a Sexta (8h às 20h) e Sábados (8h30 às 12h)<br/> Telefones: (81) 3413.6666 / 6728 / 6729 / 6730</p>
+                <p style={{color:"white"}}>© 2024 Salão Senac</p>
+                <p style={{marginTop: "20px" , color:"white"}} >Senac Pernambuco (sede)<br/> Central de Atendimento: Segunda a Sexta (8h às 20h) e Sábados (8h30 às 12h)<br/> Telefones: (81) 3413.6666 / 6728 / 6729 / 6730</p>
             </footer>
 
             {/* <ServiceCard 

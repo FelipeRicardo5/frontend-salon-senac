@@ -13,10 +13,10 @@
     flex-direction: column;
     gap: 12px;
     padding: 1em;
-    background-color: #bdbcbc5d;
+    background-color: #fff6f600;
     max-width: 400px;
     margin: 0 auto;
-    background: rgba( 255, 255, 255, 0 );
+    background: rgba(255, 255, 255, 0.664);
 
     backdrop-filter: blur( 40px );
     -webkit-backdrop-filter: blur( 10px );
