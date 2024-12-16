@@ -12,7 +12,7 @@ import Toast from './Toast';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 
-function CadastroCliente() {
+function RegisterClients() {
 
   const [toast, setToast] = useState({ show: false, message: '', type: '' });
   const [nome, setNome] = useState('');
@@ -111,4 +111,4 @@ function CadastroCliente() {
   );
 }
 
-export default CadastroCliente;
+export default RegisterClients;

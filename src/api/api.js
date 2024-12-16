@@ -7,9 +7,9 @@ const apiMock = axios.create({
 
 const apiReal = axios.create({
   baseURL: 'http://localhost:8081/salao', // Endereço da API Rai
-              headers: {
-                'Content-Type': 'application/json',
-              }
+  headers: {
+    'Content-Type': 'application/json',
+  }
 });
 
 
@@ -36,7 +36,7 @@ export const handleLogin = async (email, password) => {
       params: { email, password }, // Passa os parâmetros para a APIMock
     });
 
-    // Retorna o usuário encontrado ou null caso não exista
+    // Te deolve o usuário caso não exista
     if (response.data.length > 0) {
       return response.data[0]; // Retorna o primeiro usuário encontrado
     } else {
@@ -44,7 +44,7 @@ export const handleLogin = async (email, password) => {
     }
   } catch (error) {
     console.error('Erro ao fazer login:', error);
-    throw error; // Propaga o erro para ser tratado no componente
+    throw error; // Printa o erro
   }
 };
 
@@ -53,7 +53,7 @@ export const handleRegister = async (userData) => {
   try {
     // Envia os dados do usuário para a APIMock
     const response = await apiMock.post('/users', userData);
-    return response.data; // Retorna o usuário criado
+    return response.data;
   } catch (error) {
     console.error('Erro ao cadastrar usuário:', error);
     throw error; // Propaga o erro 
