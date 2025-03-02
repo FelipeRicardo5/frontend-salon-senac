@@ -1,4 +1,3 @@
-Aqui está um README atualizado para o novo projeto baseado nas tecnologias **React**, **TypeScript** e **Vite**, inspirado no modelo anterior de agendamento de serviços do "Salão SENAC":
 
 ---
 
